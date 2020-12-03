@@ -4,9 +4,9 @@ from random import randrange
 
 def gen_matrix(size):
     matrix = []
-    for i in xrange(size):
+    for i in range(size):
         row = []
-        for j in xrange(size):
+        for j in range(size):
             rand_num = randrange(1,size+1)
             row.append(rand_num)
         # ensure diagonal dominance here:
@@ -17,7 +17,7 @@ def gen_matrix(size):
 
 def get_random_solution(size):
     solution = []
-    for i in xrange(size):
+    for i in range(size):
         rand_num = randrange(1,size+1)
         solution.append(rand_num)
     return solution
@@ -26,7 +26,7 @@ def get_random_solution(size):
 if __name__ == "__main__":
 
     if len(sys.argv) != 3:
-        print "Usage: python gen_diag_dominant_matrix.py <size> <output_filename>\n"
+        print("Usage: python gen_diag_dominant_matrix.py <size> <output_filename>\n")
         sys.exit()
 
     size = int(sys.argv[1])
@@ -41,4 +41,4 @@ if __name__ == "__main__":
         outfile.write('\n'.join(map(str,row)))
         outfile.write('\n')
     outfile.write('\n'.join(map(str,solution)))
-    outfile.close
+    outfile.close()
