@@ -1,3 +1,9 @@
 matrix_*.txt
 *.swp
+.vscode
+*.txt
+matrices/
+*.exe
+*.exp
+*.lib
 
